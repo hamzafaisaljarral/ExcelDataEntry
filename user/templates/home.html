@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+{% block content %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Empcode</th>
+      <th scope="col">Firstname</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for item in users %}
+    <tr>
+
+      <td>{{ item.empcode }}</td>
+      <td>{{ item.firstname }}</td>
+
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<br>
+<p class="text-center">copy and paste from excel <a href="/import/create">copy and paste</a>.</p>
+<p class="text-center">upload multiple csv <a href="/import">upload multiple csv</a>.</p>
+{% endblock content %}
+{% include 'footer.html' %}
+
